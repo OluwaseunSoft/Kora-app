@@ -1,0 +1,602 @@
+[
+  {
+    "id": "time",
+    "title": {
+      "en": "Make room for what matters",
+      "pcm": "Make time for wetin matter"
+    },
+    "description": {
+      "en": "Choose one task.",
+      "pcm": "Pick one work. Write when you go do am. Leave small space for wahala."
+    },
+    "estimatedMinutes": 5,
+    "readingLevel": 1,
+    "tags": ["time"],
+    "translationType": "machine",
+    "sources": [
+      {
+        "author": "Amy Baldwin / OpenStax",
+        "sourceWork": "College Success · 3-4-how-to-manage-time",
+        "year": "2020",
+        "sourceUrl": "https://openstax.org/books/college-success/pages/3-4-how-to-manage-time",
+        "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+        "verificationStatus": "verified",
+        "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+        "verifiedAt": "2026-10-14"
+      }
+    ],
+    "quizIds": ["time-1", "time-2", "time-3"],
+    "sections": [
+      {
+        "id": "idea",
+        "heading": {
+          "en": "A small idea",
+          "pcm": "One small idea"
+        },
+        "text": {
+          "en": "Choose one task. Write its deadline. Put a small work period beside it in your calendar. Leave space for travel and interruptions.",
+          "pcm": "Pick one work. Write when you go do am. Leave small space for wahala."
+        },
+        "simple": {
+          "en": "Choose one task.",
+          "pcm": "Pick one work. Write when you go do am. Leave small space for wahala."
+        }
+      },
+      {
+        "id": "practice",
+        "heading": {
+          "en": "Your five-minute practice",
+          "pcm": "Your five-minute practice"
+        },
+        "text": {
+          "en": "Try it now: Write one next action you can take on this topic today. You can pause whenever you need.",
+          "pcm": "Try am now: Write one next step wey you fit take today for this topic. You fit pause anytime."
+        },
+        "simple": {
+          "en": "Choose one task.",
+          "pcm": "Pick one work. Write when you go do am. Leave small space for wahala."
+        }
+      }
+    ]
+  },
+  {
+    "id": "notes",
+    "title": {
+      "en": "Notes you can actually use",
+      "pcm": "Notes wey go help you"
+    },
+    "description": {
+      "en": "Write a heading, key ideas, and one question from a class.",
+      "pcm": "Write the main ideas and one question. Later, cover am and explain one idea."
+    },
+    "estimatedMinutes": 5,
+    "readingLevel": 1,
+    "tags": ["notes"],
+    "translationType": "machine",
+    "sources": [
+      {
+        "author": "Amy Baldwin / OpenStax",
+        "sourceWork": "College Success · 5-3-taking-notes",
+        "year": "2020",
+        "sourceUrl": "https://openstax.org/books/college-success/pages/5-3-taking-notes",
+        "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+        "verificationStatus": "verified",
+        "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+        "verifiedAt": "2026-10-14"
+      }
+    ],
+    "quizIds": ["notes-1", "notes-2", "notes-3"],
+    "sections": [
+      {
+        "id": "idea",
+        "heading": {
+          "en": "A small idea",
+          "pcm": "One small idea"
+        },
+        "text": {
+          "en": "Write a heading, key ideas, and one question from a class. Later, cover the notes and explain one idea in your own words.",
+          "pcm": "Write the main ideas and one question. Later, cover am and explain one idea."
+        },
+        "simple": {
+          "en": "Write a heading, key ideas, and one question from a class.",
+          "pcm": "Write the main ideas and one question. Later, cover am and explain one idea."
+        }
+      },
+      {
+        "id": "practice",
+        "heading": {
+          "en": "Your five-minute practice",
+          "pcm": "Your five-minute practice"
+        },
+        "text": {
+          "en": "Try it now: Write one next action you can take on this topic today. You can pause whenever you need.",
+          "pcm": "Try am now: Write one next step wey you fit take today for this topic. You fit pause anytime."
+        },
+        "simple": {
+          "en": "Write a heading, key ideas, and one question from a class.",
+          "pcm": "Write the main ideas and one question. Later, cover am and explain one idea."
+        }
+      }
+    ]
+  },
+  {
+    "id": "outline",
+    "title": {
+      "en": "Read your course outline",
+      "pcm": "Understand your course outline"
+    },
+    "description": {
+      "en": "Find the learning goals, assessment dates, and required materials in your course outline.",
+      "pcm": "Find wetin you go learn and the dates. Ask lecturer if anything no clear."
+    },
+    "estimatedMinutes": 5,
+    "readingLevel": 1,
+    "tags": ["outline"],
+    "translationType": "machine",
+    "sources": [
+      {
+        "author": "Amy Baldwin / OpenStax",
+        "sourceWork": "College Success · 5-1-the-nature-and-types-of-reading",
+        "year": "2020",
+        "sourceUrl": "https://openstax.org/books/college-success/pages/5-1-the-nature-and-types-of-reading",
+        "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+        "verificationStatus": "verified",
+        "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+        "verifiedAt": "2026-10-14"
+      }
+    ],
+    "quizIds": ["outline-1", "outline-2", "outline-3"],
+    "sections": [
+      {
+        "id": "idea",
+        "heading": {
+          "en": "A small idea",
+          "pcm": "One small idea"
+        },
+        "text": {
+          "en": "Find the learning goals, assessment dates, and required materials in your course outline. Ask your course representative or lecturer about anything unclear.",
+          "pcm": "Find wetin you go learn and the dates. Ask lecturer if anything no clear."
+        },
+        "simple": {
+          "en": "Find the learning goals, assessment dates, and required materials in your course outline.",
+          "pcm": "Find wetin you go learn and the dates. Ask lecturer if anything no clear."
+        }
+      },
+      {
+        "id": "practice",
+        "heading": {
+          "en": "Your five-minute practice",
+          "pcm": "Your five-minute practice"
+        },
+        "text": {
+          "en": "Try it now: Write one next action you can take on this topic today. You can pause whenever you need.",
+          "pcm": "Try am now: Write one next step wey you fit take today for this topic. You fit pause anytime."
+        },
+        "simple": {
+          "en": "Find the learning goals, assessment dates, and required materials in your course outline.",
+          "pcm": "Find wetin you go learn and the dates. Ask lecturer if anything no clear."
+        }
+      }
+    ]
+  },
+  {
+    "id": "cgpa",
+    "title": {
+      "en": "Understand your CGPA",
+      "pcm": "Understand your CGPA"
+    },
+    "description": {
+      "en": "GPA weights each grade by its credit units.",
+      "pcm": "Credit units give each grade weight. Kora na practice; your school decide your result."
+    },
+    "estimatedMinutes": 5,
+    "readingLevel": 1,
+    "tags": ["cgpa"],
+    "translationType": "machine",
+    "sources": [
+      {
+        "author": "National Open University of Nigeria",
+        "sourceWork": "BLIS Student Handbook · sections 4.5 and 4.9",
+        "year": "2018–2023",
+        "sourceUrl": "https://nou.edu.ng/wp-content/uploads/sites/11/2022/11/DEPT-of-LIS-STUDENT-HANDBOOK-6.54.56-PM1-corrected-August-20221.pdf",
+        "license": "Factual grading summary; no reproduction of handbook text. Confirm current institutional rules.",
+        "verificationStatus": "verified",
+        "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+        "verifiedAt": "2026-10-14"
+      }
+    ],
+    "quizIds": ["cgpa-1", "cgpa-2", "cgpa-3"],
+    "sections": [
+      {
+        "id": "idea",
+        "heading": {
+          "en": "A small idea",
+          "pcm": "One small idea"
+        },
+        "text": {
+          "en": "GPA weights each grade by its credit units. CGPA combines graded courses across semesters. Kora uses mock grades; your institution decides the official result.",
+          "pcm": "Credit units give each grade weight. Kora na practice; your school decide your result."
+        },
+        "simple": {
+          "en": "GPA weights each grade by its credit units.",
+          "pcm": "Credit units give each grade weight. Kora na practice; your school decide your result."
+        }
+      },
+      {
+        "id": "practice",
+        "heading": {
+          "en": "Your five-minute practice",
+          "pcm": "Your five-minute practice"
+        },
+        "text": {
+          "en": "Try it now: Write one next action you can take on this topic today. You can pause whenever you need.",
+          "pcm": "Try am now: Write one next step wey you fit take today for this topic. You fit pause anytime."
+        },
+        "simple": {
+          "en": "GPA weights each grade by its credit units.",
+          "pcm": "Credit units give each grade weight. Kora na practice; your school decide your result."
+        }
+      }
+    ]
+  },
+  {
+    "id": "exams",
+    "title": {
+      "en": "Prepare a little at a time",
+      "pcm": "Prepare small small for exam"
+    },
+    "description": {
+      "en": "Choose a topic and practise recalling it without looking.",
+      "pcm": "Pick topic, try remember am, check your answer. Come back another day."
+    },
+    "estimatedMinutes": 5,
+    "readingLevel": 1,
+    "tags": ["exams"],
+    "translationType": "machine",
+    "sources": [
+      {
+        "author": "Amy Baldwin / OpenStax",
+        "sourceWork": "College Success · 6-2-studying",
+        "year": "2020",
+        "sourceUrl": "https://openstax.org/books/college-success/pages/6-2-studying",
+        "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+        "verificationStatus": "verified",
+        "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+        "verifiedAt": "2026-10-14"
+      }
+    ],
+    "quizIds": ["exams-1", "exams-2", "exams-3"],
+    "sections": [
+      {
+        "id": "idea",
+        "heading": {
+          "en": "A small idea",
+          "pcm": "One small idea"
+        },
+        "text": {
+          "en": "Choose a topic and practise recalling it without looking. Check your answer, then return to it another day. Use the course outline to guide your revision.",
+          "pcm": "Pick topic, try remember am, check your answer. Come back another day."
+        },
+        "simple": {
+          "en": "Choose a topic and practise recalling it without looking.",
+          "pcm": "Pick topic, try remember am, check your answer. Come back another day."
+        }
+      },
+      {
+        "id": "practice",
+        "heading": {
+          "en": "Your five-minute practice",
+          "pcm": "Your five-minute practice"
+        },
+        "text": {
+          "en": "Try it now: Write one next action you can take on this topic today. You can pause whenever you need.",
+          "pcm": "Try am now: Write one next step wey you fit take today for this topic. You fit pause anytime."
+        },
+        "simple": {
+          "en": "Choose a topic and practise recalling it without looking.",
+          "pcm": "Pick topic, try remember am, check your answer. Come back another day."
+        }
+      }
+    ]
+  },
+  {
+    "id": "help",
+    "title": {
+      "en": "Ask for help early",
+      "pcm": "Ask for help on time"
+    },
+    "description": {
+      "en": "Write down what you tried and the exact part you do not understand.",
+      "pcm": "Write wetin you try and where you stuck. Carry the question go meet person wey fit help."
+    },
+    "estimatedMinutes": 5,
+    "readingLevel": 1,
+    "tags": ["help"],
+    "translationType": "machine",
+    "sources": [
+      {
+        "author": "National Open University of Nigeria",
+        "sourceWork": "BLIS Student Handbook · sections 4.5 and 4.9",
+        "year": "2018–2023",
+        "sourceUrl": "https://nou.edu.ng/wp-content/uploads/sites/11/2022/11/DEPT-of-LIS-STUDENT-HANDBOOK-6.54.56-PM1-corrected-August-20221.pdf",
+        "license": "Factual grading summary; no reproduction of handbook text. Confirm current institutional rules.",
+        "verificationStatus": "verified",
+        "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+        "verifiedAt": "2026-10-14"
+      }
+    ],
+    "quizIds": ["help-1", "help-2", "help-3"],
+    "sections": [
+      {
+        "id": "idea",
+        "heading": {
+          "en": "A small idea",
+          "pcm": "One small idea"
+        },
+        "text": {
+          "en": "Write down what you tried and the exact part you do not understand. Take that question to a lecturer, course representative, adviser, or library desk. Confirm local support routes.",
+          "pcm": "Write wetin you try and where you stuck. Carry the question go meet person wey fit help."
+        },
+        "simple": {
+          "en": "Write down what you tried and the exact part you do not understand.",
+          "pcm": "Write wetin you try and where you stuck. Carry the question go meet person wey fit help."
+        }
+      },
+      {
+        "id": "practice",
+        "heading": {
+          "en": "Your five-minute practice",
+          "pcm": "Your five-minute practice"
+        },
+        "text": {
+          "en": "Try it now: Write one next action you can take on this topic today. You can pause whenever you need.",
+          "pcm": "Try am now: Write one next step wey you fit take today for this topic. You fit pause anytime."
+        },
+        "simple": {
+          "en": "Write down what you tried and the exact part you do not understand.",
+          "pcm": "Write wetin you try and where you stuck. Carry the question go meet person wey fit help."
+        }
+      }
+    ]
+  },
+  {
+    "id": "rest",
+    "title": {
+      "en": "Rest belongs in your plan",
+      "pcm": "Rest dey inside your plan"
+    },
+    "description": {
+      "en": "Build a rest period into your study plan.",
+      "pcm": "Put rest for your plan. If you tire, do small work or pause."
+    },
+    "estimatedMinutes": 5,
+    "readingLevel": 1,
+    "tags": ["rest"],
+    "translationType": "machine",
+    "sources": [
+      {
+        "author": "Amy Baldwin / OpenStax",
+        "sourceWork": "College Success · 11-2-sleep",
+        "year": "2020",
+        "sourceUrl": "https://openstax.org/books/college-success/pages/11-2-sleep",
+        "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+        "verificationStatus": "verified",
+        "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+        "verifiedAt": "2026-10-14"
+      }
+    ],
+    "quizIds": ["rest-1", "rest-2", "rest-3"],
+    "sections": [
+      {
+        "id": "idea",
+        "heading": {
+          "en": "A small idea",
+          "pcm": "One small idea"
+        },
+        "text": {
+          "en": "Build a rest period into your study plan. When tired, choose a smaller task or a pause. A rest token in Kora keeps a learning week without requiring a lesson.",
+          "pcm": "Put rest for your plan. If you tire, do small work or pause."
+        },
+        "simple": {
+          "en": "Build a rest period into your study plan.",
+          "pcm": "Put rest for your plan. If you tire, do small work or pause."
+        }
+      },
+      {
+        "id": "practice",
+        "heading": {
+          "en": "Your five-minute practice",
+          "pcm": "Your five-minute practice"
+        },
+        "text": {
+          "en": "Try it now: Write one next action you can take on this topic today. You can pause whenever you need.",
+          "pcm": "Try am now: Write one next step wey you fit take today for this topic. You fit pause anytime."
+        },
+        "simple": {
+          "en": "Build a rest period into your study plan.",
+          "pcm": "Put rest for your plan. If you tire, do small work or pause."
+        }
+      }
+    ]
+  },
+  {
+    "id": "resources",
+    "title": {
+      "en": "Find a useful open resource",
+      "pcm": "Find material wey go help"
+    },
+    "description": {
+      "en": "Write the topic you need.",
+      "pcm": "Write your topic. Ask library. Check who publish am and whether you fit save am."
+    },
+    "estimatedMinutes": 5,
+    "readingLevel": 1,
+    "tags": ["resources"],
+    "translationType": "machine",
+    "sources": [
+      {
+        "author": "Amy Baldwin / OpenStax",
+        "sourceWork": "College Success · 5-2-effective-reading-strategies",
+        "year": "2020",
+        "sourceUrl": "https://openstax.org/books/college-success/pages/5-2-effective-reading-strategies",
+        "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+        "verificationStatus": "verified",
+        "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+        "verifiedAt": "2026-10-14"
+      }
+    ],
+    "quizIds": ["resources-1", "resources-2", "resources-3"],
+    "sections": [
+      {
+        "id": "idea",
+        "heading": {
+          "en": "A small idea",
+          "pcm": "One small idea"
+        },
+        "text": {
+          "en": "Write the topic you need. Ask the library for a relevant resource. Check who published it and whether you may download or reuse it. Save only what you need.",
+          "pcm": "Write your topic. Ask library. Check who publish am and whether you fit save am."
+        },
+        "simple": {
+          "en": "Write the topic you need.",
+          "pcm": "Write your topic. Ask library. Check who publish am and whether you fit save am."
+        }
+      },
+      {
+        "id": "practice",
+        "heading": {
+          "en": "Your five-minute practice",
+          "pcm": "Your five-minute practice"
+        },
+        "text": {
+          "en": "Try it now: Write one next action you can take on this topic today. You can pause whenever you need.",
+          "pcm": "Try am now: Write one next step wey you fit take today for this topic. You fit pause anytime."
+        },
+        "simple": {
+          "en": "Write the topic you need.",
+          "pcm": "Write your topic. Ask library. Check who publish am and whether you fit save am."
+        }
+      }
+    ]
+  },
+  {
+    "id": "return",
+    "title": {
+      "en": "Begin again, gently",
+      "pcm": "Start again, easy easy"
+    },
+    "description": {
+      "en": "Choose one task small enough to begin today.",
+      "pcm": "Pick one small work today. Check your last notes. Choose next step."
+    },
+    "estimatedMinutes": 5,
+    "readingLevel": 1,
+    "tags": ["return"],
+    "translationType": "machine",
+    "sources": [
+      {
+        "author": "Amy Baldwin / OpenStax",
+        "sourceWork": "College Success · 3-4-how-to-manage-time",
+        "year": "2020",
+        "sourceUrl": "https://openstax.org/books/college-success/pages/3-4-how-to-manage-time",
+        "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+        "verificationStatus": "verified",
+        "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+        "verifiedAt": "2026-10-14"
+      }
+    ],
+    "quizIds": ["return-1", "return-2", "return-3"],
+    "sections": [
+      {
+        "id": "idea",
+        "heading": {
+          "en": "A small idea",
+          "pcm": "One small idea"
+        },
+        "text": {
+          "en": "Choose one task small enough to begin today. Look at your last notes and write the next action. You can change your study time when life interrupts your old plan.",
+          "pcm": "Pick one small work today. Check your last notes. Choose next step."
+        },
+        "simple": {
+          "en": "Choose one task small enough to begin today.",
+          "pcm": "Pick one small work today. Check your last notes. Choose next step."
+        }
+      },
+      {
+        "id": "practice",
+        "heading": {
+          "en": "Your five-minute practice",
+          "pcm": "Your five-minute practice"
+        },
+        "text": {
+          "en": "Try it now: Write one next action you can take on this topic today. You can pause whenever you need.",
+          "pcm": "Try am now: Write one next step wey you fit take today for this topic. You fit pause anytime."
+        },
+        "simple": {
+          "en": "Choose one task small enough to begin today.",
+          "pcm": "Pick one small work today. Check your last notes. Choose next step."
+        }
+      }
+    ]
+  },
+  {
+    "id": "data",
+    "title": {
+      "en": "Study with less data and power",
+      "pcm": "Use small data and power study"
+    },
+    "description": {
+      "en": "When connected, open the Kora lesson you need and check that offline saving finishes.",
+      "pcm": "Open Kora when network dey. Wait make offline saving finish. Keep your next step for paper."
+    },
+    "estimatedMinutes": 5,
+    "readingLevel": 1,
+    "tags": ["data"],
+    "translationType": "machine",
+    "sources": [
+      {
+        "author": "Amy Baldwin / OpenStax",
+        "sourceWork": "College Success · 5-2-effective-reading-strategies",
+        "year": "2020",
+        "sourceUrl": "https://openstax.org/books/college-success/pages/5-2-effective-reading-strategies",
+        "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+        "verificationStatus": "verified",
+        "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+        "verifiedAt": "2026-10-14"
+      }
+    ],
+    "quizIds": ["data-1", "data-2", "data-3"],
+    "sections": [
+      {
+        "id": "idea",
+        "heading": {
+          "en": "A small idea",
+          "pcm": "One small idea"
+        },
+        "text": {
+          "en": "When connected, open the Kora lesson you need and check that offline saving finishes. Keep a paper note of your next step. External source links need internet; the lesson and quiz do not.",
+          "pcm": "Open Kora when network dey. Wait make offline saving finish. Keep your next step for paper."
+        },
+        "simple": {
+          "en": "When connected, open the Kora lesson you need and check that offline saving finishes.",
+          "pcm": "Open Kora when network dey. Wait make offline saving finish. Keep your next step for paper."
+        }
+      },
+      {
+        "id": "practice",
+        "heading": {
+          "en": "Your five-minute practice",
+          "pcm": "Your five-minute practice"
+        },
+        "text": {
+          "en": "Try it now: Write one next action you can take on this topic today. You can pause whenever you need.",
+          "pcm": "Try am now: Write one next step wey you fit take today for this topic. You fit pause anytime."
+        },
+        "simple": {
+          "en": "When connected, open the Kora lesson you need and check that offline saving finishes.",
+          "pcm": "Open Kora when network dey. Wait make offline saving finish. Keep your next step for paper."
+        }
+      }
+    ]
+  }
+]

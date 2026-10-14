@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "time-1",
+    "lessonId": "time",
+    "prompt": {
+      "en": "Which plan leaves room for interruptions?",
+      "pcm": "Which plan leaves room for interruptions?"
+    },
+    "options": [
+      {
+        "en": "Fill every minute",
+        "pcm": "Fill every minute"
+      },
+      {
+        "en": "One task with a buffer",
+        "pcm": "One task with a buffer"
+      },
+      {
+        "en": "Wait until the deadline",
+        "pcm": "Wait until the deadline"
+      }
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "en": "A buffer gives your plan room to change.",
+      "pcm": "A buffer gives your plan room to change."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 3-4-how-to-manage-time",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/3-4-how-to-manage-time",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "time-2",
+    "lessonId": "time",
+    "prompt": {
+      "en": "Your journey to class takes time. Where does it belong?",
+      "pcm": "Your journey to class takes time. Where does it belong?"
+    },
+    "options": [
+      {
+        "en": "Outside your plan",
+        "pcm": "Outside your plan"
+      },
+      {
+        "en": "Inside your calendar",
+        "pcm": "Inside your calendar"
+      },
+      {
+        "en": "Only after the exam",
+        "pcm": "Only after the exam"
+      }
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "en": "Include travel and ordinary commitments in your plan.",
+      "pcm": "Include travel and ordinary commitments in your plan."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 3-4-how-to-manage-time",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/3-4-how-to-manage-time",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "time-3",
+    "lessonId": "time",
+    "prompt": {
+      "en": "A task took longer than you expected. What can you adjust?",
+      "pcm": "A task took longer than you expected. What can you adjust?"
+    },
+    "options": [
+      {
+        "en": "Your next time estimate",
+        "pcm": "Your next time estimate"
+      },
+      {
+        "en": "Every course grade",
+        "pcm": "Every course grade"
+      },
+      {
+        "en": "The official exam date",
+        "pcm": "The official exam date"
+      }
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "en": "Use what you learned to make the next estimate more useful.",
+      "pcm": "Use what you learned to make the next estimate more useful."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 3-4-how-to-manage-time",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/3-4-how-to-manage-time",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "notes-1",
+    "lessonId": "notes",
+    "prompt": {
+      "en": "What can you add to your notes for review?",
+      "pcm": "What can you add to your notes for review?"
+    },
+    "options": [
+      {
+        "en": "Only decoration",
+        "pcm": "Only decoration"
+      },
+      {
+        "en": "Every word the lecturer says",
+        "pcm": "Every word the lecturer says"
+      },
+      {
+        "en": "A question to answer later",
+        "pcm": "A question to answer later"
+      }
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "en": "A question makes your next review active.",
+      "pcm": "A question makes your next review active."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 5-3-taking-notes",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/5-3-taking-notes",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "notes-2",
+    "lessonId": "notes",
+    "prompt": {
+      "en": "Which part can help you notice confusion?",
+      "pcm": "Which part can help you notice confusion?"
+    },
+    "options": [
+      {
+        "en": "The colour of the page",
+        "pcm": "The colour of the page"
+      },
+      {
+        "en": "Your handwriting size",
+        "pcm": "Your handwriting size"
+      },
+      {
+        "en": "A question beside the key idea",
+        "pcm": "A question beside the key idea"
+      }
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "en": "Writing a question gives you something concrete to check.",
+      "pcm": "Writing a question gives you something concrete to check."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 5-3-taking-notes",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/5-3-taking-notes",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "notes-3",
+    "lessonId": "notes",
+    "prompt": {
+      "en": "You covered your notes. What comes next?",
+      "pcm": "You covered your notes. What comes next?"
+    },
+    "options": [
+      {
+        "en": "Explain an idea in your own words",
+        "pcm": "Explain an idea in your own words"
+      },
+      {
+        "en": "Copy the page without thinking",
+        "pcm": "Copy the page without thinking"
+      },
+      {
+        "en": "Delete the heading",
+        "pcm": "Delete the heading"
+      }
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "en": "Recall and explanation make review active.",
+      "pcm": "Recall and explanation make review active."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 5-3-taking-notes",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/5-3-taking-notes",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "outline-1",
+    "lessonId": "outline",
+    "prompt": {
+      "en": "Where should you confirm a course deadline?",
+      "pcm": "Where should you confirm a course deadline?"
+    },
+    "options": [
+      {
+        "en": "The course outline or lecturer",
+        "pcm": "The course outline or lecturer"
+      },
+      {
+        "en": "A guess",
+        "pcm": "A guess"
+      },
+      {
+        "en": "An unrelated course",
+        "pcm": "An unrelated course"
+      }
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "en": "Use the course information and ask for clarification.",
+      "pcm": "Use the course information and ask for clarification."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 5-1-the-nature-and-types-of-reading",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/5-1-the-nature-and-types-of-reading",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "outline-2",
+    "lessonId": "outline",
+    "prompt": {
+      "en": "Which details can you look for in an outline?",
+      "pcm": "Which details can you look for in an outline?"
+    },
+    "options": [
+      {
+        "en": "Only classroom decoration",
+        "pcm": "Only classroom decoration"
+      },
+      {
+        "en": "Goals, assessments, and materials",
+        "pcm": "Goals, assessments, and materials"
+      },
+      {
+        "en": "Your friend’s nickname",
+        "pcm": "Your friend’s nickname"
+      }
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "en": "These details help you prepare for that course.",
+      "pcm": "These details help you prepare for that course."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 5-1-the-nature-and-types-of-reading",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/5-1-the-nature-and-types-of-reading",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "outline-3",
+    "lessonId": "outline",
+    "prompt": {
+      "en": "An assessment instruction is unclear. Who can clarify it?",
+      "pcm": "An assessment instruction is unclear. Who can clarify it?"
+    },
+    "options": [
+      {
+        "en": "An unrelated comment online",
+        "pcm": "An unrelated comment online"
+      },
+      {
+        "en": "Nobody",
+        "pcm": "Nobody"
+      },
+      {
+        "en": "Your lecturer or course representative",
+        "pcm": "Your lecturer or course representative"
+      }
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "en": "Ask someone connected to the course.",
+      "pcm": "Ask someone connected to the course."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 5-1-the-nature-and-types-of-reading",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/5-1-the-nature-and-types-of-reading",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "cgpa-1",
+    "lessonId": "cgpa",
+    "prompt": {
+      "en": "Which affects a weighted GPA?",
+      "pcm": "Which affects a weighted GPA?"
+    },
+    "options": [
+      {
+        "en": "Only the course name",
+        "pcm": "Only the course name"
+      },
+      {
+        "en": "Grade points and credit units",
+        "pcm": "Grade points and credit units"
+      },
+      {
+        "en": "Only the number of classes",
+        "pcm": "Only the number of classes"
+      }
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "en": "Multiply grade points by units, add, then divide by graded units.",
+      "pcm": "Multiply grade points by units, add, then divide by graded units."
+    },
+    "source": {
+      "author": "National Open University of Nigeria",
+      "sourceWork": "BLIS Student Handbook · sections 4.5 and 4.9",
+      "year": "2018–2023",
+      "sourceUrl": "https://nou.edu.ng/wp-content/uploads/sites/11/2022/11/DEPT-of-LIS-STUDENT-HANDBOOK-6.54.56-PM1-corrected-August-20221.pdf",
+      "license": "Factual grading summary; no reproduction of handbook text. Confirm current institutional rules.",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "cgpa-2",
+    "lessonId": "cgpa",
+    "prompt": {
+      "en": "An A has 5 points and a course has 3 units. What is its weighted contribution?",
+      "pcm": "An A has 5 points and a course has 3 units. What is its weighted contribution?"
+    },
+    "options": [
+      {
+        "en": "5",
+        "pcm": "5"
+      },
+      {
+        "en": "3",
+        "pcm": "3"
+      },
+      {
+        "en": "15",
+        "pcm": "15"
+      }
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "en": "Multiply 5 points by 3 units to get 15 weighted points.",
+      "pcm": "Multiply 5 points by 3 units to get 15 weighted points."
+    },
+    "source": {
+      "author": "National Open University of Nigeria",
+      "sourceWork": "BLIS Student Handbook · sections 4.5 and 4.9",
+      "year": "2018–2023",
+      "sourceUrl": "https://nou.edu.ng/wp-content/uploads/sites/11/2022/11/DEPT-of-LIS-STUDENT-HANDBOOK-6.54.56-PM1-corrected-August-20221.pdf",
+      "license": "Factual grading summary; no reproduction of handbook text. Confirm current institutional rules.",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "cgpa-3",
+    "lessonId": "cgpa",
+    "prompt": {
+      "en": "Does a mock CGPA replace your official result?",
+      "pcm": "Does a mock CGPA replace your official result?"
+    },
+    "options": [
+      {
+        "en": "Yes, always",
+        "pcm": "Yes, always"
+      },
+      {
+        "en": "No; institutional rules decide it",
+        "pcm": "No; institutional rules decide it"
+      },
+      {
+        "en": "Only when Kora is offline",
+        "pcm": "Only when Kora is offline"
+      }
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "en": "Kora is a planning tool and cannot issue official results.",
+      "pcm": "Kora is a planning tool and cannot issue official results."
+    },
+    "source": {
+      "author": "National Open University of Nigeria",
+      "sourceWork": "BLIS Student Handbook · sections 4.5 and 4.9",
+      "year": "2018–2023",
+      "sourceUrl": "https://nou.edu.ng/wp-content/uploads/sites/11/2022/11/DEPT-of-LIS-STUDENT-HANDBOOK-6.54.56-PM1-corrected-August-20221.pdf",
+      "license": "Factual grading summary; no reproduction of handbook text. Confirm current institutional rules.",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "exams-1",
+    "lessonId": "exams",
+    "prompt": {
+      "en": "What is an active review step?",
+      "pcm": "What is an active review step?"
+    },
+    "options": [
+      {
+        "en": "Read without stopping",
+        "pcm": "Read without stopping"
+      },
+      {
+        "en": "Avoid checking answers",
+        "pcm": "Avoid checking answers"
+      },
+      {
+        "en": "Recall an idea, then check it",
+        "pcm": "Recall an idea, then check it"
+      }
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "en": "Checking your recall helps you choose what to revisit.",
+      "pcm": "Checking your recall helps you choose what to revisit."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 6-2-studying",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/6-2-studying",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "exams-2",
+    "lessonId": "exams",
+    "prompt": {
+      "en": "You recalled an answer incorrectly. What is a useful next step?",
+      "pcm": "You recalled an answer incorrectly. What is a useful next step?"
+    },
+    "options": [
+      {
+        "en": "Check it and revisit the topic",
+        "pcm": "Check it and revisit the topic"
+      },
+      {
+        "en": "Avoid the topic forever",
+        "pcm": "Avoid the topic forever"
+      },
+      {
+        "en": "Ignore the correction",
+        "pcm": "Ignore the correction"
+      }
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "en": "A correction helps you choose what needs practice.",
+      "pcm": "A correction helps you choose what needs practice."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 6-2-studying",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/6-2-studying",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "exams-3",
+    "lessonId": "exams",
+    "prompt": {
+      "en": "How can a course outline guide revision?",
+      "pcm": "How can a course outline guide revision?"
+    },
+    "options": [
+      {
+        "en": "It makes sleep unnecessary",
+        "pcm": "It makes sleep unnecessary"
+      },
+      {
+        "en": "It predicts every question",
+        "pcm": "It predicts every question"
+      },
+      {
+        "en": "It identifies the course topics and goals",
+        "pcm": "It identifies the course topics and goals"
+      }
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "en": "Use course topics and goals to choose revision material.",
+      "pcm": "Use course topics and goals to choose revision material."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 6-2-studying",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/6-2-studying",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "help-1",
+    "lessonId": "help",
+    "prompt": {
+      "en": "Which question is easiest to help with?",
+      "pcm": "Which question is easiest to help with?"
+    },
+    "options": [
+      {
+        "en": "I tried step two; why does this result differ?",
+        "pcm": "I tried step two; why does this result differ?"
+      },
+      {
+        "en": "Everything is impossible",
+        "pcm": "Everything is impossible"
+      },
+      {
+        "en": "No question at all",
+        "pcm": "No question at all"
+      }
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "en": "A specific question gives the other person a useful starting point.",
+      "pcm": "A specific question gives the other person a useful starting point."
+    },
+    "source": {
+      "author": "National Open University of Nigeria",
+      "sourceWork": "BLIS Student Handbook · sections 4.5 and 4.9",
+      "year": "2018–2023",
+      "sourceUrl": "https://nou.edu.ng/wp-content/uploads/sites/11/2022/11/DEPT-of-LIS-STUDENT-HANDBOOK-6.54.56-PM1-corrected-August-20221.pdf",
+      "license": "Factual grading summary; no reproduction of handbook text. Confirm current institutional rules.",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "help-2",
+    "lessonId": "help",
+    "prompt": {
+      "en": "What can you include with a question?",
+      "pcm": "What can you include with a question?"
+    },
+    "options": [
+      {
+        "en": "Only a complaint",
+        "pcm": "Only a complaint"
+      },
+      {
+        "en": "What you already tried",
+        "pcm": "What you already tried"
+      },
+      {
+        "en": "A demand for an instant answer",
+        "pcm": "A demand for an instant answer"
+      }
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "en": "Your attempted steps help someone see where you got stuck.",
+      "pcm": "Your attempted steps help someone see where you got stuck."
+    },
+    "source": {
+      "author": "National Open University of Nigeria",
+      "sourceWork": "BLIS Student Handbook · sections 4.5 and 4.9",
+      "year": "2018–2023",
+      "sourceUrl": "https://nou.edu.ng/wp-content/uploads/sites/11/2022/11/DEPT-of-LIS-STUDENT-HANDBOOK-6.54.56-PM1-corrected-August-20221.pdf",
+      "license": "Factual grading summary; no reproduction of handbook text. Confirm current institutional rules.",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "help-3",
+    "lessonId": "help",
+    "prompt": {
+      "en": "Where should you confirm campus support routes?",
+      "pcm": "Where should you confirm campus support routes?"
+    },
+    "options": [
+      {
+        "en": "With your institution",
+        "pcm": "With your institution"
+      },
+      {
+        "en": "By guessing all campuses are alike",
+        "pcm": "By guessing all campuses are alike"
+      },
+      {
+        "en": "In an unrelated game",
+        "pcm": "In an unrelated game"
+      }
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "en": "Local staff or official information can confirm available support.",
+      "pcm": "Local staff or official information can confirm available support."
+    },
+    "source": {
+      "author": "National Open University of Nigeria",
+      "sourceWork": "BLIS Student Handbook · sections 4.5 and 4.9",
+      "year": "2018–2023",
+      "sourceUrl": "https://nou.edu.ng/wp-content/uploads/sites/11/2022/11/DEPT-of-LIS-STUDENT-HANDBOOK-6.54.56-PM1-corrected-August-20221.pdf",
+      "license": "Factual grading summary; no reproduction of handbook text. Confirm current institutional rules.",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "rest-1",
+    "lessonId": "rest",
+    "prompt": {
+      "en": "What can you do when your plan feels too large?",
+      "pcm": "What can you do when your plan feels too large?"
+    },
+    "options": [
+      {
+        "en": "Ignore all rest",
+        "pcm": "Ignore all rest"
+      },
+      {
+        "en": "Choose a smaller task or pause",
+        "pcm": "Choose a smaller task or pause"
+      },
+      {
+        "en": "Lock every lesson",
+        "pcm": "Lock every lesson"
+      }
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "en": "A smaller step or planned pause is a valid choice.",
+      "pcm": "A smaller step or planned pause is a valid choice."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 11-2-sleep",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/11-2-sleep",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "rest-2",
+    "lessonId": "rest",
+    "prompt": {
+      "en": "A Kora rest token can keep a week without what?",
+      "pcm": "A Kora rest token can keep a week without what?"
+    },
+    "options": [
+      {
+        "en": "A nickname",
+        "pcm": "A nickname"
+      },
+      {
+        "en": "An official transcript",
+        "pcm": "An official transcript"
+      },
+      {
+        "en": "Completing a lesson",
+        "pcm": "Completing a lesson"
+      }
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "en": "Rest counts as keeping the learning week.",
+      "pcm": "Rest counts as keeping the learning week."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 11-2-sleep",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/11-2-sleep",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "rest-3",
+    "lessonId": "rest",
+    "prompt": {
+      "en": "A rest period can be placed where?",
+      "pcm": "A rest period can be placed where?"
+    },
+    "options": [
+      {
+        "en": "Inside your study plan",
+        "pcm": "Inside your study plan"
+      },
+      {
+        "en": "Only after all courses end",
+        "pcm": "Only after all courses end"
+      },
+      {
+        "en": "Nowhere",
+        "pcm": "Nowhere"
+      }
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "en": "Rest belongs in a sustainable plan.",
+      "pcm": "Rest belongs in a sustainable plan."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 11-2-sleep",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/11-2-sleep",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "resources-1",
+    "lessonId": "resources",
+    "prompt": {
+      "en": "What should you check before reusing a resource?",
+      "pcm": "What should you check before reusing a resource?"
+    },
+    "options": [
+      {
+        "en": "Only the colours",
+        "pcm": "Only the colours"
+      },
+      {
+        "en": "Only its popularity",
+        "pcm": "Only its popularity"
+      },
+      {
+        "en": "The publisher and licence",
+        "pcm": "The publisher and licence"
+      }
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "en": "A source and licence help you judge and use a resource responsibly.",
+      "pcm": "A source and licence help you judge and use a resource responsibly."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 5-2-effective-reading-strategies",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/5-2-effective-reading-strategies",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "resources-2",
+    "lessonId": "resources",
+    "prompt": {
+      "en": "What should you bring to a library desk?",
+      "pcm": "What should you bring to a library desk?"
+    },
+    "options": [
+      {
+        "en": "No topic or question",
+        "pcm": "No topic or question"
+      },
+      {
+        "en": "The topic you need help with",
+        "pcm": "The topic you need help with"
+      },
+      {
+        "en": "Only a demand for a grade",
+        "pcm": "Only a demand for a grade"
+      }
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "en": "A topic helps the librarian point you to relevant material.",
+      "pcm": "A topic helps the librarian point you to relevant material."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 5-2-effective-reading-strategies",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/5-2-effective-reading-strategies",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "resources-3",
+    "lessonId": "resources",
+    "prompt": {
+      "en": "Does finding a resource automatically give permission to reuse it?",
+      "pcm": "Does finding a resource automatically give permission to reuse it?"
+    },
+    "options": [
+      {
+        "en": "No; check its licence",
+        "pcm": "No; check its licence"
+      },
+      {
+        "en": "Yes, every time",
+        "pcm": "Yes, every time"
+      },
+      {
+        "en": "Only if the file is large",
+        "pcm": "Only if the file is large"
+      }
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "en": "Access and reuse permissions are different.",
+      "pcm": "Access and reuse permissions are different."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 5-2-effective-reading-strategies",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/5-2-effective-reading-strategies",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "return-1",
+    "lessonId": "return",
+    "prompt": {
+      "en": "After an interruption, what is a useful first step?",
+      "pcm": "After an interruption, what is a useful first step?"
+    },
+    "options": [
+      {
+        "en": "One small next action",
+        "pcm": "One small next action"
+      },
+      {
+        "en": "Restart every course at once",
+        "pcm": "Restart every course at once"
+      },
+      {
+        "en": "Give up your materials",
+        "pcm": "Give up your materials"
+      }
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "en": "One concrete action makes it easier to restart.",
+      "pcm": "One concrete action makes it easier to restart."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 3-4-how-to-manage-time",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/3-4-how-to-manage-time",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "return-2",
+    "lessonId": "return",
+    "prompt": {
+      "en": "What can help you locate your next step?",
+      "pcm": "What can help you locate your next step?"
+    },
+    "options": [
+      {
+        "en": "Erase every old note",
+        "pcm": "Erase every old note"
+      },
+      {
+        "en": "Wait for a perfect week",
+        "pcm": "Wait for a perfect week"
+      },
+      {
+        "en": "Look at the notes you last used",
+        "pcm": "Look at the notes you last used"
+      }
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "en": "Your previous notes can show where to begin.",
+      "pcm": "Your previous notes can show where to begin."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 3-4-how-to-manage-time",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/3-4-how-to-manage-time",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "return-3",
+    "lessonId": "return",
+    "prompt": {
+      "en": "Your old study time no longer fits. What can you change?",
+      "pcm": "Your old study time no longer fits. What can you change?"
+    },
+    "options": [
+      {
+        "en": "Your study time",
+        "pcm": "Your study time"
+      },
+      {
+        "en": "The institution’s calendar",
+        "pcm": "The institution’s calendar"
+      },
+      {
+        "en": "Another person’s transcript",
+        "pcm": "Another person’s transcript"
+      }
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "en": "Choose a time that works with your current commitments.",
+      "pcm": "Choose a time that works with your current commitments."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 3-4-how-to-manage-time",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/3-4-how-to-manage-time",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "data-1",
+    "lessonId": "data",
+    "prompt": {
+      "en": "Which Kora activity works after offline saving?",
+      "pcm": "Which Kora activity works after offline saving?"
+    },
+    "options": [
+      {
+        "en": "Opening any external website",
+        "pcm": "Opening any external website"
+      },
+      {
+        "en": "Reading a saved lesson and its quiz",
+        "pcm": "Reading a saved lesson and its quiz"
+      },
+      {
+        "en": "Streaming a new video",
+        "pcm": "Streaming a new video"
+      }
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "en": "The app saves its own lessons and quizzes, not external websites.",
+      "pcm": "The app saves its own lessons and quizzes, not external websites."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 5-2-effective-reading-strategies",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/5-2-effective-reading-strategies",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "data-2",
+    "lessonId": "data",
+    "prompt": {
+      "en": "Which links still need internet?",
+      "pcm": "Which links still need internet?"
+    },
+    "options": [
+      {
+        "en": "Saved Kora quizzes",
+        "pcm": "Saved Kora quizzes"
+      },
+      {
+        "en": "External source websites",
+        "pcm": "External source websites"
+      },
+      {
+        "en": "The mock grade picker",
+        "pcm": "The mock grade picker"
+      }
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "en": "Kora caches its own app, not every website it links to.",
+      "pcm": "Kora caches its own app, not every website it links to."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 5-2-effective-reading-strategies",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/5-2-effective-reading-strategies",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  },
+  {
+    "id": "data-3",
+    "lessonId": "data",
+    "prompt": {
+      "en": "What should you check before disconnecting?",
+      "pcm": "What should you check before disconnecting?"
+    },
+    "options": [
+      {
+        "en": "That offline saving has finished",
+        "pcm": "That offline saving has finished"
+      },
+      {
+        "en": "That every mock grade is an A",
+        "pcm": "That every mock grade is an A"
+      },
+      {
+        "en": "That all lessons are completed",
+        "pcm": "That all lessons are completed"
+      }
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "en": "Wait for the offline-ready indicator before disconnecting.",
+      "pcm": "Wait for the offline-ready indicator before disconnecting."
+    },
+    "source": {
+      "author": "Amy Baldwin / OpenStax",
+      "sourceWork": "College Success · 5-2-effective-reading-strategies",
+      "year": "2020",
+      "sourceUrl": "https://openstax.org/books/college-success/pages/5-2-effective-reading-strategies",
+      "license": "Brief adapted study guidance, CC BY-NC-SA 4.0; attribution: Access for free at https://openstax.org/books/college-success/pages/1-introduction",
+      "verificationStatus": "verified",
+      "verifiedBy": "Kora source check (automated agent); independent editorial review welcome",
+      "verifiedAt": "2026-10-14"
+    },
+    "reviewStatus": "reviewed",
+    "reviewedBy": "Kora automated editorial pass",
+    "reviewNote": "Answer checked against lesson/product behavior; pending independent human review."
+  }
+]

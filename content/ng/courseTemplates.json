@@ -1,0 +1,51 @@
+[
+  {
+    "programme": "Computer Science",
+    "level": 100,
+    "semester": 0,
+    "note": "typical, editable",
+    "courses": [
+      { "code": "GST 101", "title": "Use of English", "creditUnits": 2 },
+      {
+        "code": "CSC 101",
+        "title": "Introduction to Computing",
+        "creditUnits": 3
+      },
+      {
+        "code": "MTH 101",
+        "title": "Elementary Mathematics",
+        "creditUnits": 3
+      },
+      { "code": "PHY 101", "title": "General Physics", "creditUnits": 3 },
+      {
+        "code": "GST 103",
+        "title": "Study and Library Skills",
+        "creditUnits": 2
+      },
+      {
+        "code": "STA 101",
+        "title": "Introduction to Statistics",
+        "creditUnits": 3
+      }
+    ]
+  },
+  {
+    "programme": "General Studies",
+    "level": 100,
+    "semester": 0,
+    "note": "typical, editable",
+    "courses": [
+      { "code": "GST 101", "title": "Use of English", "creditUnits": 2 },
+      {
+        "code": "GST 102",
+        "title": "Nigerian Peoples and Culture",
+        "creditUnits": 2
+      },
+      {
+        "code": "GST 103",
+        "title": "Study and Library Skills",
+        "creditUnits": 2
+      }
+    ]
+  }
+]

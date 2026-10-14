@@ -1,0 +1,101 @@
+[
+  {
+    "id": "achebe",
+    "author": "Chinua Achebe",
+    "sourceWork": "Things Fall Apart",
+    "year": "1958",
+    "sourceUrl": "https://www.penguinrandomhouse.com/books/565351/things-fall-apart-by-chinua-achebe/",
+    "verificationStatus": "unverified",
+    "todo": "TODO: independent primary-source wording, page, licence and cultural attribution check. No wording displayed."
+  },
+  {
+    "id": "adichie",
+    "author": "Chimamanda Ngozi Adichie",
+    "sourceWork": "The danger of a single story",
+    "year": "2009",
+    "sourceUrl": "https://www.ted.com/talks/chimamanda_ngozi_adichie_the_danger_of_a_single_story",
+    "verificationStatus": "unverified",
+    "todo": "TODO: independent primary-source wording, page, licence and cultural attribution check. No wording displayed."
+  },
+  {
+    "id": "soyinka",
+    "author": "Wole Soyinka",
+    "sourceWork": "Nobel lecture",
+    "year": "1986",
+    "sourceUrl": "https://www.nobelprize.org/prizes/literature/1986/soyinka/lecture/",
+    "verificationStatus": "unverified",
+    "todo": "TODO: independent primary-source wording, page, licence and cultural attribution check. No wording displayed."
+  },
+  {
+    "id": "okonjo",
+    "author": "Ngozi Okonjo-Iweala",
+    "sourceWork": "Memoir / primary interview",
+    "year": "2021",
+    "sourceUrl": "https://www.wto.org/english/thewto_e/dg_e/dg_e.htm",
+    "verificationStatus": "unverified",
+    "todo": "TODO: independent primary-source wording, page, licence and cultural attribution check. No wording displayed."
+  },
+  {
+    "id": "mandela",
+    "author": "Nelson Mandela",
+    "sourceWork": "Long Walk to Freedom",
+    "year": "1994",
+    "sourceUrl": "https://www.nelsonmandela.org/",
+    "verificationStatus": "unverified",
+    "todo": "TODO: independent primary-source wording, page, licence and cultural attribution check. No wording displayed."
+  },
+  {
+    "id": "malala",
+    "author": "Malala Yousafzai",
+    "sourceWork": "UN speech",
+    "year": "2013",
+    "sourceUrl": "https://www.un.org/",
+    "verificationStatus": "unverified",
+    "todo": "TODO: independent primary-source wording, page, licence and cultural attribution check. No wording displayed."
+  },
+  {
+    "id": "dweck",
+    "author": "Carol Dweck",
+    "sourceWork": "Mindset",
+    "year": "2006",
+    "sourceUrl": "https://www.penguinrandomhouse.com/",
+    "verificationStatus": "unverified",
+    "todo": "TODO: independent primary-source wording, page, licence and cultural attribution check. No wording displayed."
+  },
+  {
+    "id": "oakley",
+    "author": "Barbara Oakley",
+    "sourceWork": "Learning How to Learn",
+    "year": "2014",
+    "sourceUrl": "https://barbaraoakley.com/",
+    "verificationStatus": "unverified",
+    "todo": "TODO: independent primary-source wording, page, licence and cultural attribution check. No wording displayed."
+  },
+  {
+    "id": "yoruba",
+    "author": "Yoruba culture",
+    "sourceWork": "Published proverb collection",
+    "year": "unknown",
+    "sourceUrl": "https://search.worldcat.org/",
+    "verificationStatus": "unverified",
+    "todo": "TODO: independent primary-source wording, page, licence and cultural attribution check. No wording displayed."
+  },
+  {
+    "id": "igbo",
+    "author": "Igbo culture",
+    "sourceWork": "Published proverb collection",
+    "year": "unknown",
+    "sourceUrl": "https://search.worldcat.org/",
+    "verificationStatus": "unverified",
+    "todo": "TODO: independent primary-source wording, page, licence and cultural attribution check. No wording displayed."
+  },
+  {
+    "id": "hausa",
+    "author": "Hausa culture",
+    "sourceWork": "Published proverb collection",
+    "year": "unknown",
+    "sourceUrl": "https://search.worldcat.org/",
+    "verificationStatus": "unverified",
+    "todo": "TODO: independent primary-source wording, page, licence and cultural attribution check. No wording displayed."
+  }
+]

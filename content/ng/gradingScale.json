@@ -1,0 +1,23 @@
+{
+  "id": "ng-five",
+  "name": "Nigerian 5-point planning scale",
+  "maxPoints": 5,
+  "editable": true,
+  "bands": [
+    { "minScore": 70, "maxScore": 100, "grade": "A", "points": 5 },
+    { "minScore": 60, "maxScore": 69, "grade": "B", "points": 4 },
+    { "minScore": 50, "maxScore": 59, "grade": "C", "points": 3 },
+    { "minScore": 45, "maxScore": 49, "grade": "D", "points": 2 },
+    { "minScore": 40, "maxScore": 44, "grade": "E", "points": 1 },
+    { "minScore": 0, "maxScore": 39, "grade": "F", "points": 0 }
+  ],
+  "classes": [
+    { "minCgpa": 4.5, "maxCgpa": 5, "label": "first" },
+    { "minCgpa": 3.5, "maxCgpa": 4.49, "label": "upper" },
+    { "minCgpa": 2.4, "maxCgpa": 3.49, "label": "lower" },
+    { "minCgpa": 1.5, "maxCgpa": 2.39, "label": "third" },
+    { "minCgpa": 1, "maxCgpa": 1.49, "label": "pass" }
+  ],
+  "sourceNote": "NOUN BLIS Student Handbook (2018–2023), pp. 17–19 (PDF pp. 21–23), sections 4.5 and 4.9. The handbook notes that Pass is no longer recognised for first degrees. Historical planning bands are editable; confirm current institutional rules. F=0 is the prototype assumption for scores below 40.",
+  "sourceUrl": "https://nou.edu.ng/wp-content/uploads/sites/11/2022/11/DEPT-of-LIS-STUDENT-HANDBOOK-6.54.56-PM1-corrected-August-20221.pdf"
+}

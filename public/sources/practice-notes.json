@@ -1,0 +1,85 @@
+{
+  "author": "Kora practice cards (AI-assisted)",
+  "year": "2026",
+  "license": "CC BY 4.0",
+  "note": "Original reflective prompts; not quotations, institutional policy, or clinical guidance.",
+  "prompts": [
+    [
+      "why",
+      "Your own reason",
+      "Write one reason you want to keep learning. Keep it somewhere you can find it again.",
+      "purpose",
+      "time"
+    ],
+    [
+      "question",
+      "One useful question",
+      "Write a question from your last class. Asking it can be today’s small step.",
+      "curiosity",
+      "help"
+    ],
+    [
+      "start",
+      "Choose your starting point",
+      "Open the notes you last used. Circle one part you want to understand better.",
+      "return",
+      "return"
+    ],
+    [
+      "space",
+      "Make a little space",
+      "Choose a place for one short study session. Put the one thing you need within reach.",
+      "time",
+      "time"
+    ],
+    [
+      "tomorrow",
+      "A note for tomorrow",
+      "Before you stop, write your next small action. Tomorrow you will have a place to begin.",
+      "return",
+      "return"
+    ],
+    [
+      "pause",
+      "Permission to pause",
+      "Choose a pause when you need one. Kora keeps every lesson open whenever you return.",
+      "rest",
+      "rest"
+    ],
+    [
+      "specific",
+      "Make it specific",
+      "Turn “study more” into one task you can name: one paragraph, one question, or one worked example.",
+      "time",
+      "time"
+    ],
+    [
+      "voice",
+      "Explain it your way",
+      "Explain one idea as though a friend asked about it. Notice where you would like more clarity.",
+      "curiosity",
+      "notes"
+    ],
+    [
+      "support",
+      "You can ask someone",
+      "Name one person or campus service you could ask for help. You do not need to solve every question alone.",
+      "purpose",
+      "help"
+    ],
+    [
+      "adapt",
+      "A plan you can change",
+      "Look at your week. Move one study task to a time that actually fits your commitments.",
+      "return",
+      "time"
+    ],
+    [
+      "remember",
+      "Notice a small step",
+      "Write one thing you understand today that you wanted to understand before. You can keep a record without a streak.",
+      "purpose",
+      "notes"
+    ]
+  ]
+}

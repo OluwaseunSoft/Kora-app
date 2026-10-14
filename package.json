@@ -1,0 +1,39 @@
+{
+  "name": "kora-future-self-lab",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "npm run validate && next build && node scripts/offline.mjs",
+    "start": "node scripts/serve.mjs",
+    "test": "vitest run",
+    "test:browser": "node scripts/browser-check.mjs",
+    "validate": "tsx scripts/validate.ts",
+    "lint": "eslint .",
+    "format": "prettier --write app components lib tests scripts content README.md",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dexie": "^4.0.11",
+    "next": "^15.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@eslint/eslintrc": "^3.3.7",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^15.5.0",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "lighthouse": "^11.7.1",
+    "playwright-core": "^1.64.0",
+    "prettier": "^3.5.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0",
+    "vitest": "^3.2.0"
+  }
+}
