@@ -1,0 +1,10 @@
+tester,date,device_model,os,browser,assistive_technology,content_version,task_id,result,evidence,issue
+,,,,,,,cold_start,pending,,
+,,,,,,,install_offline_relaunch,pending,,
+,,,,,,,interrupted_update,pending,,
+,,,,,,,storage_exhaustion,pending,,
+,,,,,,,backup_recovery,pending,,
+,,,,,,,screen_reader_onboarding,pending,,
+,,,,,,,screen_reader_semester,pending,,
+,,,,,,,screen_reader_practice,pending,,
+,,,,,,,large_text_reflow,pending,,

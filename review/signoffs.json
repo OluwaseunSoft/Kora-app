@@ -1,0 +1,8 @@
+[
+  { "id": "independent-editorial", "status": "pending", "reviewer": null, "reviewedAt": null, "evidence": "", "notes": "Source wording, answer correctness, permissions, cultural attribution, plain language." },
+  { "id": "native-pidgin-review", "status": "pending", "reviewer": null, "reviewedAt": null, "evidence": "", "notes": "Fluent Nigerian Pidgin speaker reviews UI, lessons, quizzes and attributed translations." },
+  { "id": "institution-cohort-confirmation", "status": "pending", "reviewer": null, "reviewedAt": null, "evidence": "", "notes": "Confirm each offered handbook edition, programme/cohort scope, retake treatment and any superseding policy with a qualified institutional contact." },
+  { "id": "physical-android", "status": "pending", "reviewer": null, "reviewedAt": null, "evidence": "", "notes": "Record device/browser, installation, offline relaunch, interrupted updates, storage pressure and backup recovery." },
+  { "id": "human-screen-reader", "status": "pending", "reviewer": null, "reviewedAt": null, "evidence": "", "notes": "Complete the manual accessibility protocol with a screen-reader user; automated axe checks are separate evidence." },
+  { "id": "campus-pilot", "status": "pending", "reviewer": null, "reviewedAt": null, "evidence": "", "notes": "Run the consented pilot, including participants who stop using the app; report results without attributing improved grades to activity counts." }
+]

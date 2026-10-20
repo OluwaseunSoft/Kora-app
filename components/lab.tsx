@@ -12,8 +12,11 @@ import type { CopyKey } from "../lib/i18n";
 import templates from "../content/ng/courseTemplates.json";
 import defaultScale from "../content/ng/gradingScale.json";
 import { Icon } from "./icons";
+import { InstitutionPicker } from "./institution-picker";
+import { packs } from "../lib/institutions";
 export function Lab() {
   const { data, update, t } = useKora();
+  const activePack = packs.find((p) => p.id === data.scale.packId);
   const [semester, setSemester] = useState(0),
     [template, setTemplate] = useState(0),
     [remaining, setRemaining] = useState(16),
@@ -78,6 +81,7 @@ export function Lab() {
       return;
     }
     const scale = structuredClone(data.scale);
+    scale.customized = true;
     if (kind === "points") scale.bands[index].points = value;
     else scale.classes[index].minCgpa = value;
     const mins = scale.classes.map((c) => c.minCgpa);
@@ -99,6 +103,7 @@ export function Lab() {
         <Icon name="lab" size={18} />
         {t("estimate")}
       </p>
+      <InstitutionPicker />
       <div className="lab-layout">
         <div>
           <section className="card course-card">
@@ -234,6 +239,15 @@ export function Lab() {
                       update((s) => ({
                         ...s,
                         courses: s.courses.filter((x) => x.id !== c.id),
+                        academic: {
+                          ...s.academic,
+                          study: s.academic.study.filter(
+                            (v) => v.courseId !== c.id,
+                          ),
+                          deadlines: s.academic.deadlines.filter(
+                            (v) => v.courseId !== c.id,
+                          ),
+                        },
                       }))
                     }
                   >
@@ -328,8 +342,15 @@ export function Lab() {
               ))}
             </div>
             {scaleError && <p role="alert">{t("scaleInvalid")}</p>}
-            <p className="hint">{defaultScale.sourceNote}</p>
-            <a href={defaultScale.sourceUrl} target="_blank" rel="noreferrer">
+            {data.scale.customized && <p>{t("editedRulesNote")}</p>}
+            <p className="hint">
+              {activePack?.scale.sourceNote ?? defaultScale.sourceNote}
+            </p>
+            <a
+              href={activePack?.source.url ?? defaultScale.sourceUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
               {t("readMore")} ↗
             </a>
             <button

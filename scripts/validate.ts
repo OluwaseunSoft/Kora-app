@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs";
+import { institutionSchema } from "../lib/institutions/schema";
 import {
   entrySchema,
   lessonSchema,
@@ -9,6 +10,11 @@ import {
 } from "../lib/content/schema";
 const read = (p: string) => JSON.parse(readFileSync(p, "utf8")) as unknown[];
 export function validateContent() {
+  const packs = read("content/ng/institutions.json").map((p) =>
+    institutionSchema.parse(p),
+  );
+  if (new Set(packs.map((p) => p.id)).size !== packs.length)
+    throw new Error("Duplicate institution pack");
   scaleSchema.parse(
     JSON.parse(readFileSync("content/ng/gradingScale.json", "utf8")),
   );

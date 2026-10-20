@@ -27,6 +27,14 @@ With the production server running, `npm run test:browser` verifies offline flow
 
 ## Demo
 
+The connected semester workflow is available under **My semester**. Record received grades separately from Lab scenarios, add assignment/exam dates, preview a seven-day study allocation, and edit or complete sessions. Calendar export produces independent all-day events. **Practice** includes due reviews and mistake review; lesson answers feed the same offline schedule. **Your data** exports a versioned snapshot and validates old or new backups before a confirmed replacement. Guest restores remain in memory. See [IMPLEMENTATION.md](IMPLEMENTATION.md) for delivered scope, pilot guidance and remaining review work.
+
+With the production server running, `npm run test:semester` checks the new semester and practice flows offline, including persistence, responsive layouts and axe accessibility.
+
+The Lab and My semester now offer dated, source-linked Ilorin EEE and Lokoja Statistics grading snapshots. Review the programme/edition and pending human-review status before applying; current-cohort and retake rules still require confirmation. **Your data** also offers a separate voluntary study-summary download that omits personal names, grades and raw sessions.
+
+For release preparation, run `npm run review:prepare`, then follow [the review handoff](review/README.md). `npm run release:check` reports pending human approvals and intentionally fails until they are actually completed. The [pilot kit](research/pilot-plan.md) and [physical-device/accessibility protocol](review/accessibility-protocol.md) are ready for the human team; no outreach or testing results are implied.
+
 Open `/welcome/`, enter a nickname (optional), continue, accept device-storage consent, and choose the Tunde demo. Existing users can select the demo in Settings after confirming that it replaces local data. In the Lab, modify grades, try a what-if change, or choose a 3.5 target. Open a source badge and use “Try this today”. In Settings, simulate four days; return to My journey for an optional five-minute recovery suggestion. Use a rest token. Disconnect after offline saving finishes; lessons, quizzes, library, and planning remain available.
 
 ## Content and review
@@ -51,7 +59,7 @@ Onboarding also offers **Continue without saving**. All lessons and tools remain
 
 Rules are isolated in `lib/momentum/index.ts`. Only optional offers reach the UI; internal state labels are never shown. Offers are limited to once per day after action/dismissal and respect quiet/adaptive settings. Two tokens are granted when a new learning week is entered; unused tokens remain. A session or rest token keeps a week. Demo time is isolated behind `createClock`; it does not alter the system clock. The demo has completed material for a return recap. Returning learners revisit an existing lesson; nothing new is required.
 
-Dexie tables in `lib/db/index.ts` contain the profile, settings, plans, courses, targets, progress, sessions, momentum, saved entries, scale preferences and local reports. Saving is queued and transactional. Export includes every table. Deletion waits for queued saves, invalidates pending writes, and clears all learner tables without removing the public offline shell. External navigation and hosting requests are the only network activity; there are no analytics or learner-data request calls.
+Dexie tables in `lib/db/index.ts` contain the profile, settings, plans, courses, targets, progress, sessions, momentum, saved entries, scale preferences, local reports and semester data. Saving is queued and transactional. Export includes the complete learner snapshot; derived plan and target records are reconstructed when saving a restored snapshot. Deletion waits for queued saves, invalidates pending writes, and clears all learner tables without removing the public offline shell. External navigation and hosting requests are the only network activity; there are no analytics or learner-data request calls.
 
 ## Validation limits
 

@@ -9,6 +9,8 @@ import rawLessons from "../content/lessons/lessons.json";
 import rawQuizzes from "../content/lessons/quizzes.json";
 import type { Lesson, Quiz } from "../lib/content/schema";
 import { keptWeeks, weekKey, config } from "../lib/momentum";
+import { Practice } from "./practice";
+import { recordReview } from "../lib/academic";
 export const lessons = rawLessons as Lesson[],
   quizzes = rawQuizzes as Quiz[];
 const lessonIcons = [
@@ -33,6 +35,10 @@ export function Learn() {
         <h1>{t("learnTitle")}</h1>
         <p className="intro">{t("learnIntro")}</p>
       </div>
+      <Link className="text-link" href="/library/">
+        {t("library")} →
+      </Link>
+      <Practice />
       <div className="lesson-grid">
         {lessons.map((l, i) => {
           const done = data.progress.some(
@@ -329,6 +335,18 @@ export function LessonReader({ id }: { id: string }) {
                       return;
                     }
                     setChecked(true);
+                    update((s) => ({
+                      ...s,
+                      academic: {
+                        ...s.academic,
+                        reviews: recordReview(
+                          s.academic.reviews,
+                          current.id,
+                          selected === current.correctIndex,
+                          now(),
+                        ),
+                      },
+                    }));
                     setResults([...results, selected === current.correctIndex]);
                   }}
                 >

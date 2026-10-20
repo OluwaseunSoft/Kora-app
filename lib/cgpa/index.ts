@@ -4,11 +4,14 @@ export interface Course {
   title: string;
   creditUnits: number;
   plannedGrade: string | null;
+  actualGrade?: string | null;
   semesterIndex: number;
   status: "planned" | "retake";
   planId: string;
 }
 export interface Scale {
+  packId?: string;
+  customized?: boolean;
   maxPoints: number;
   bands: {
     grade: string;

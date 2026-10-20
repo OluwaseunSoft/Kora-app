@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useKora } from "./provider";
 import { Icon } from "./icons";
 import { EntryCard } from "./entry-card";
+import { TodayPlan } from "./today-plan";
 import { evaluateMomentum, keptWeeks, weekKey } from "../lib/momentum";
 import { selectEntry } from "../lib/triggers";
 import rawEntries from "../content/library/entries.json";
@@ -137,6 +138,7 @@ export function Home() {
           <span>01</span>
         </div>
       </div>
+      <TodayPlan />
       {!dismissed && shownOffer.offer && (
         <section className="recovery card" aria-label={t("recoveryTitle")}>
           <div>

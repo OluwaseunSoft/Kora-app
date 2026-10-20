@@ -10,19 +10,14 @@ import {
 } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-import {
-  db,
-  defaultSettings,
-  emptyMomentum,
-  loadSnapshot,
-  saveSnapshot,
-  type Snapshot,
-} from "../lib/db";
+import { defaultSettings, emptyMomentum, type Snapshot } from "../lib/db/state";
+import { loadSnapshot, saveSnapshot, deleteAll } from "../lib/db/lazy";
 import scale from "../content/ng/gradingScale.json";
 import templates from "../content/ng/courseTemplates.json";
 import { dictionary, type CopyKey } from "../lib/i18n";
 import { createClock, weekKey, config } from "../lib/momentum";
 import { Icon } from "./icons";
+import { emptyAcademic } from "../lib/academic";
 type Context = {
   data: Snapshot;
   update: (change: (s: Snapshot) => Snapshot) => void;
@@ -36,6 +31,7 @@ type Context = {
   useWithoutSaving: () => void;
   enableSaving: () => void;
   restoring: boolean;
+  restore: (input: unknown) => Promise<void>;
 };
 const KoraContext = createContext<Context | null>(null);
 export const useKora = () => {
@@ -46,6 +42,7 @@ export const useKora = () => {
 export function KoraProvider({ children }: { children: ReactNode }) {
   const [data, setData] = useState<Snapshot | null>(() => ({
       profile: null,
+      academic: emptyAcademic(),
       settings: { ...defaultSettings },
       courses: [],
       progress: [],
@@ -68,6 +65,7 @@ export function KoraProvider({ children }: { children: ReactNode }) {
   const saveQueue = useRef(Promise.resolve());
   const loaded = useRef(false);
   const generation = useRef(0);
+  const replacing = useRef(false);
   const boot = useCallback(() => {
     setError(false);
     setRestoring(true);
@@ -150,7 +148,9 @@ export function KoraProvider({ children }: { children: ReactNode }) {
   );
   const update = useCallback(
     (change: (s: Snapshot) => Snapshot) =>
-      setData((previous) => (previous ? change(previous) : previous)),
+      setData((previous) =>
+        previous && !replacing.current ? change(previous) : previous,
+      ),
     [],
   );
   if (error)
@@ -175,12 +175,13 @@ export function KoraProvider({ children }: { children: ReactNode }) {
       key = weekKey(now);
     generation.current++;
     setData({
+      academic: emptyAcademic(),
       profile: {
         id: "me",
         nickname: "Tunde",
         language: data.profile?.language ?? "en",
         createdAt: now,
-        optionalFields: {},
+        optionalFields: { koraDemo: "true" },
       },
       settings: { ...defaultSettings, consentAcceptedAt: guest ? null : now },
       courses: templates[0].courses.map((c, i) => ({
@@ -218,12 +219,11 @@ export function KoraProvider({ children }: { children: ReactNode }) {
   const clear = async () => {
     generation.current++;
     await saveQueue.current.catch(() => {});
-    await db.transaction("rw", db.tables, async () => {
-      for (const table of db.tables) await table.clear();
-    });
+    await deleteAll();
     loaded.current = false;
     setGuest(false);
     setData({
+      academic: emptyAcademic(),
       profile: null,
       settings: { ...defaultSettings },
       courses: [],
@@ -255,6 +255,24 @@ export function KoraProvider({ children }: { children: ReactNode }) {
         flush,
         guest,
         restoring,
+        restore: async (input) => {
+          if (replacing.current) throw new Error("Restore in progress");
+          const { parseBackup } = await import("../lib/db/backup");
+          const restored = parseBackup(input);
+          restored.settings.consentAcceptedAt = guest
+            ? null
+            : data.settings.consentAcceptedAt;
+          replacing.current = true;
+          generation.current++;
+          try {
+            await saveQueue.current.catch(() => {});
+            if (!guest && restored.settings.consentAcceptedAt)
+              await saveSnapshot(restored);
+            setData(restored);
+          } finally {
+            replacing.current = false;
+          }
+        },
         useWithoutSaving: () => setGuest(true),
         enableSaving: () => {
           update((s) => ({
@@ -269,58 +287,71 @@ export function KoraProvider({ children }: { children: ReactNode }) {
         {t("skip")}
       </a>
       <div className="app-shell">
-        <aside className="sidebar">
-          <Link className="brand" href="/home/" aria-label={t("brand")}>
-            kora<span>✳</span>
-          </Link>
-          <div className="brand-caption">{t("tagline")}</div>
-          <nav aria-label={t("home")}>
-            {(["home", "lab", "learn", "library"] as const).map((key) => (
-              <Link
-                key={key}
-                prefetch={false}
-                href={`/${key}/`}
-                className={`nav-item ${pathname.startsWith("/" + key) ? "active" : ""}`}
-                aria-current={
-                  pathname.startsWith("/" + key) ? "page" : undefined
-                }
-              >
-                <Icon name={key} />
-                <span>{t(key)}</span>
-                {pathname.startsWith("/" + key) && <span className="nav-dot" />}
-              </Link>
-            ))}
-          </nav>
-          <div className="sidebar-bottom">
-            <div className="little-plant" aria-hidden="true">
-              <Icon name="leaf" size={32} />
-            </div>
-            <p>{t("tagline")}</p>
-            {(["settings", "privacy"] as const).map((key) => (
-              <Link
-                className={`nav-item ${pathname.startsWith("/" + key) ? "active" : ""}`}
-                key={key}
-                href={`/${key}/`}
-              >
-                <Icon name={key} />
-                {t(key)}
-              </Link>
-            ))}
-            <div className="private-label">
-              <Icon name="privacy" size={15} />
-              {t("connected")}
-            </div>
-          </div>
-        </aside>
-        <div className="workspace">
-          <header className="topbar">
-            <Link className="mobile-brand brand" href="/home/">
+        {accepted && (
+          <aside className="sidebar">
+            <Link className="brand" href="/home/" aria-label={t("brand")}>
               kora<span>✳</span>
             </Link>
-            <span className="desktop-tag">
-              {t("lab").toUpperCase()} <span className="separator">/</span>{" "}
-              {t("tagline")}
-            </span>
+            <div className="brand-caption">{t("tagline")}</div>
+            <nav aria-label={t("home")}>
+              {(["home", "semester", "lab", "learn", "library"] as const).map(
+                (key) => (
+                  <Link
+                    key={key}
+                    prefetch={false}
+                    href={`/${key}/`}
+                    className={`nav-item ${pathname.startsWith("/" + key) ? "active" : ""}`}
+                    aria-current={
+                      pathname.startsWith("/" + key) ? "page" : undefined
+                    }
+                  >
+                    <Icon name={key} />
+                    <span>{t(key === "semester" ? "semesterNav" : key)}</span>
+                    {pathname.startsWith("/" + key) && (
+                      <span className="nav-dot" />
+                    )}
+                  </Link>
+                ),
+              )}
+            </nav>
+            <div className="sidebar-bottom">
+              <div className="little-plant" aria-hidden="true">
+                <Icon name="leaf" size={32} />
+              </div>
+              <p>{t("tagline")}</p>
+              {(["settings", "privacy"] as const).map((key) => (
+                <Link
+                  prefetch={false}
+                  className={`nav-item ${pathname.startsWith("/" + key) ? "active" : ""}`}
+                  key={key}
+                  href={`/${key}/`}
+                >
+                  <Icon name={key} />
+                  {t(key)}
+                </Link>
+              ))}
+              <div className="private-label">
+                <Icon name="privacy" size={15} />
+                {t("connected")}
+              </div>
+            </div>
+          </aside>
+        )}
+        <div className={`workspace ${accepted ? "" : "public-workspace"}`}>
+          <header className="topbar">
+            <Link
+              className={accepted ? "mobile-brand brand" : "brand"}
+              href="/home/"
+              prefetch={false}
+            >
+              kora<span>✳</span>
+            </Link>
+            {accepted && (
+              <span className="desktop-tag">
+                {t("lab").toUpperCase()} <span className="separator">/</span>{" "}
+                {t("tagline")}
+              </span>
+            )}
             <div className="topbar-right">
               <span className="status">
                 <span className="status-dot" />
@@ -332,13 +363,16 @@ export function KoraProvider({ children }: { children: ReactNode }) {
                       ? t("connected")
                       : t("offlineSaving")}
               </span>
-              <Link
-                href="/settings/"
-                className="avatar"
-                aria-label={t("settings")}
-              >
-                {data.profile?.nickname?.slice(0, 1).toUpperCase() ?? "K"}
-              </Link>
+              {accepted && (
+                <Link
+                  href="/settings/"
+                  prefetch={false}
+                  className="avatar"
+                  aria-label={t("settings")}
+                >
+                  {data.profile?.nickname?.slice(0, 1).toUpperCase() ?? "K"}
+                </Link>
+              )}
             </div>
           </header>
           {saveError && (
@@ -365,6 +399,9 @@ export function KoraProvider({ children }: { children: ReactNode }) {
             tabIndex={-1}
             className={`main ${data.settings.lowLiteracyMode ? "icon-mode" : ""}`}
           >
+            {data.profile?.language === "pcm" && (
+              <p className="translation-note">{t("translation")}</p>
+            )}
             {accepted || pathname === "/welcome/" || pathname === "/" ? (
               children
             ) : (
@@ -374,20 +411,25 @@ export function KoraProvider({ children }: { children: ReactNode }) {
           <footer>{t("footer")}</footer>
         </div>
       </div>
-      <nav className="mobile-nav" aria-label={t("home")}>
-        {(["home", "lab", "learn", "library", "settings"] as const).map(
-          (key) => (
-            <Link
-              key={key}
-              href={`/${key}/`}
-              aria-current={pathname.startsWith("/" + key) ? "page" : undefined}
-            >
-              <Icon name={key} />
-              <span>{t(key)}</span>
-            </Link>
-          ),
-        )}
-      </nav>
+      {accepted && (
+        <nav className="mobile-nav" aria-label={t("home")}>
+          {(["home", "semester", "lab", "learn", "settings"] as const).map(
+            (key) => (
+              <Link
+                key={key}
+                prefetch={false}
+                href={`/${key}/`}
+                aria-current={
+                  pathname.startsWith("/" + key) ? "page" : undefined
+                }
+              >
+                <Icon name={key} />
+                <span>{t(key === "semester" ? "semesterNav" : key)}</span>
+              </Link>
+            ),
+          )}
+        </nav>
+      )}
       {message && (
         <div className="toast" role="status">
           <Icon name="check" />

@@ -7,8 +7,23 @@ const walk = (dir) =>
     e.isDirectory() ? walk(join(dir, e.name)) : [join(dir, e.name)],
   );
 const files = walk("out").filter(
-  (p) => !p.endsWith(".map") && !p.endsWith("sw.js"),
+  (p) =>
+    !p.endsWith(".map") &&
+    !p.endsWith("sw.js") &&
+    !p.endsWith("offline-status.json"),
 );
+const hash = createHash("sha256");
+for (const p of files) hash.update(readFileSync(p));
+const revision = hash.digest("hex").slice(0, 12);
+writeFileSync(
+  "out/offline-status.json",
+  JSON.stringify({
+    revision,
+    builtAt: new Date().toISOString(),
+    bytes: files.reduce((n, p) => n + readFileSync(p).length, 0),
+  }),
+);
+files.push("out/offline-status.json");
 const urls = files
   .map((p) => "/" + relative("out", p).replaceAll("\\", "/"))
   .flatMap((p) =>
@@ -18,9 +33,6 @@ const urls = files
         ? [p, "/"]
         : [p],
   );
-const hash = createHash("sha256");
-for (const p of files) hash.update(readFileSync(p));
-const revision = hash.digest("hex").slice(0, 12);
 const cache = `kora-v1-${revision}`;
 writeFileSync(
   "out/sw.js",

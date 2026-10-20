@@ -1,0 +1,93 @@
+[
+  {
+    "id": "unilorin-eee-2024",
+    "institution": "University of Ilorin",
+    "programme": "Electrical and Electronics Engineering",
+    "edition": "2024",
+    "scope": "B.Eng. EEE handbook snapshot; confirm applicability to your admission cohort with your department. Progression requirements are outside this calculator.",
+    "source": {
+      "title": "EEE CCMAS Students’ Handbook (Undergraduate)",
+      "publisher": "University of Ilorin, Department of Electrical and Electronics Engineering",
+      "url": "https://eee.engineering.unilorin.edu.ng/wp-content/uploads/sites/98/2024/12/EEE-CCMAS-Student-Handbook.pdf",
+      "printedPages": "77",
+      "pdfPages": "77",
+      "section": "Determination of results; Tables 2.1 and 2.2",
+      "checkedAt": "2026-10-20",
+      "checkMethod": "automated-primary-source-comparison"
+    },
+    "humanReview": {
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    "retakeRule": "not-established",
+    "scale": {
+      "id": "unilorin-eee-2024",
+      "name": "Ilorin EEE — 2024 handbook",
+      "maxPoints": 5,
+      "editable": true,
+      "bands": [
+        { "grade": "A", "points": 5, "minScore": 70, "maxScore": 100 },
+        { "grade": "B", "points": 4, "minScore": 60, "maxScore": 69 },
+        { "grade": "C", "points": 3, "minScore": 50, "maxScore": 59 },
+        { "grade": "D", "points": 2, "minScore": 45, "maxScore": 49 },
+        { "grade": "E", "points": 1, "minScore": 40, "maxScore": 44 },
+        { "grade": "F", "points": 0, "minScore": 0, "maxScore": 39 }
+      ],
+      "classes": [
+        { "minCgpa": 4.5, "maxCgpa": 5, "label": "first" },
+        { "minCgpa": 3.5, "maxCgpa": 4.49, "label": "upper" },
+        { "minCgpa": 2.4, "maxCgpa": 3.49, "label": "lower" },
+        { "minCgpa": 1.5, "maxCgpa": 2.39, "label": "third" }
+      ],
+      "sourceNote": "Ilorin EEE undergraduate handbook, 2024, p. 77. This edition lists four degree classes and no Pass band. Retake treatment and current-cohort applicability remain unconfirmed; independent human review is pending.",
+      "sourceUrl": "https://eee.engineering.unilorin.edu.ng/wp-content/uploads/sites/98/2024/12/EEE-CCMAS-Student-Handbook.pdf"
+    }
+  },
+  {
+    "id": "fulokoja-statistics-2020-2024",
+    "institution": "Federal University Lokoja",
+    "programme": "Statistics",
+    "edition": "2020/2021–2023/2024",
+    "scope": "Historical B.Sc. Statistics handbook snapshot for the stated edition. It is not confirmation of rules for 2026 entrants.",
+    "source": {
+      "title": "Department of Statistics Students’ Handbook",
+      "publisher": "Federal University Lokoja, Department of Statistics",
+      "url": "https://www.fulokoja.edu.ng/assets/departments/handbook/statistics_Hand_Book_24.pdf",
+      "printedPages": "9–10",
+      "pdfPages": "10–11",
+      "section": "Sections 15 and 16: examination, grading and computation",
+      "checkedAt": "2026-10-20",
+      "checkMethod": "automated-primary-source-comparison"
+    },
+    "humanReview": {
+      "status": "pending",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    "retakeRule": "not-established",
+    "scale": {
+      "id": "fulokoja-statistics-2020-2024",
+      "name": "Lokoja Statistics — 2020–2024 handbook",
+      "maxPoints": 5,
+      "editable": true,
+      "bands": [
+        { "grade": "A", "points": 5, "minScore": 70, "maxScore": 100 },
+        { "grade": "B", "points": 4, "minScore": 60, "maxScore": 69 },
+        { "grade": "C", "points": 3, "minScore": 50, "maxScore": 59 },
+        { "grade": "D", "points": 2, "minScore": 45, "maxScore": 49 },
+        { "grade": "E", "points": 1, "minScore": 40, "maxScore": 44 },
+        { "grade": "F", "points": 0, "minScore": 0, "maxScore": 39 }
+      ],
+      "classes": [
+        { "minCgpa": 4.5, "maxCgpa": 5, "label": "first" },
+        { "minCgpa": 3.5, "maxCgpa": 4.49, "label": "upper" },
+        { "minCgpa": 2.4, "maxCgpa": 3.49, "label": "lower" },
+        { "minCgpa": 1.5, "maxCgpa": 2.39, "label": "third" },
+        { "minCgpa": 1, "maxCgpa": 1.49, "label": "pass" }
+      ],
+      "sourceNote": "Lokoja Statistics handbook, 2020/2021–2023/2024, pp. 9–10. Historical edition includes a Pass band. Retake treatment and current-cohort applicability remain unconfirmed; independent human review is pending.",
+      "sourceUrl": "https://www.fulokoja.edu.ng/assets/departments/handbook/statistics_Hand_Book_24.pdf"
+    }
+  }
+]

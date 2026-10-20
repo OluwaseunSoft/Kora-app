@@ -1,5 +1,6 @@
 export function Icon({ name, size = 22 }: { name: string; size?: number }) {
   const paths: Record<string, string> = {
+    semester: "M4 5h16v16H4ZM8 3v4M16 3v4M4 10h16M8 14h2M14 14h2M8 18h2",
     home: "M3 10 12 3l9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z",
     lab: "M9 3h6M10 3v6L4 19a1 1 0 0 0 1 2h14a1 1 0 0 0 1-2L14 9V3M7 15h10",
     learn:

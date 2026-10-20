@@ -73,7 +73,7 @@ try {
   await audit("lab");
   await page.screenshot({ path: "artifacts/lab-desktop.png", fullPage: true });
   await page
-    .getByRole("link", { name: "Words to carry", exact: true })
+    .getByRole("link", { name: "Library", exact: true })
     .first()
     .click();
   await page.locator(".entry-card").first().waitFor();
@@ -90,10 +90,7 @@ try {
     .first()
     .click();
   await page.getByRole("button", { name: "Simulate 4 days passing" }).click();
-  await page
-    .getByRole("link", { name: "My journey", exact: true })
-    .first()
-    .click();
+  await page.getByRole("link", { name: "Today", exact: true }).first().click();
   await page
     .getByRole("heading", { name: "There’s room to begin again." })
     .waitFor();
@@ -124,7 +121,7 @@ try {
     .getByRole("heading", { name: "Small steps. Real possibilities." })
     .waitFor();
   await page
-    .getByRole("link", { name: "Learn a little", exact: true })
+    .getByRole("link", { name: "Practice", exact: true })
     .first()
     .click();
   await page
@@ -182,13 +179,83 @@ try {
   const exported = JSON.parse(
     readFileSync(await (await downloadEvent).path(), "utf8"),
   );
-  assert.equal(exported.profile[0].nickname, "Tunde");
-  assert.equal(exported.mockCourses.length, 6);
+  assert.equal(exported.format, "kora-snapshot-v2");
+  assert.equal(exported.snapshot.profile.nickname, "Tunde");
+  assert.equal(exported.snapshot.courses.length, 6);
   assert.equal(
-    exported.progress.find((p) => p.lessonId === "time").status,
+    exported.snapshot.progress.find((p) => p.lessonId === "time").status,
     "completed",
   );
-  assert.equal(exported.momentum[0].restTokensUsed.length, 1);
+  assert.equal(exported.snapshot.momentum.restTokensUsed.length, 1);
+  assert.equal(exported.snapshot.academic.reviews.length, 3);
+  const upload = (value) =>
+    page.getByLabel("Kora backup file").setInputFiles({
+      name: "backup.json",
+      mimeType: "application/json",
+      buffer: Buffer.from(JSON.stringify(value)),
+    });
+  await upload({ format: "kora-snapshot-v2", snapshot: {} });
+  await page
+    .getByRole("alert")
+    .filter({ hasText: "This backup could not be restored" })
+    .waitFor();
+  const interrupted = structuredClone(exported);
+  interrupted.snapshot.profile.nickname = "Must roll back";
+  await upload(interrupted);
+  await page.evaluate(() => {
+    window.__koraOriginalPut = IDBObjectStore.prototype.put;
+    IDBObjectStore.prototype.put = function (...args) {
+      if (this.name === "momentum")
+        throw new DOMException(
+          "Simulated interrupted restore",
+          "QuotaExceededError",
+        );
+      return window.__koraOriginalPut.apply(this, args);
+    };
+  });
+  await page
+    .getByRole("button", { name: "Replace my data with this backup" })
+    .click();
+  await page
+    .getByRole("alert")
+    .filter({ hasText: "This backup could not be restored" })
+    .waitFor();
+  await page.evaluate(() => {
+    IDBObjectStore.prototype.put = window.__koraOriginalPut;
+    delete window.__koraOriginalPut;
+  });
+  const nicknameAfterFailure = await page.evaluate(
+    () =>
+      new Promise((resolve, reject) => {
+        const open = indexedDB.open("kora-local");
+        open.onerror = () => reject(open.error);
+        open.onsuccess = () => {
+          const db = open.result;
+          const request = db
+            .transaction("profile")
+            .objectStore("profile")
+            .get("me");
+          request.onsuccess = () => {
+            resolve(request.result.nickname);
+            db.close();
+          };
+          request.onerror = () => reject(request.error);
+        };
+      }),
+  );
+  assert.equal(
+    nicknameAfterFailure,
+    "Tunde",
+    "Interrupted restore must roll back profile changes",
+  );
+  await upload(exported);
+  await page
+    .getByRole("button", { name: "Replace my data with this backup" })
+    .click();
+  await page
+    .getByRole("status")
+    .filter({ hasText: "Your backup has been restored" })
+    .waitFor();
   await page
     .getByRole("button", { name: "Delete my data", exact: true })
     .click();
@@ -243,10 +310,132 @@ try {
   const guestExport = JSON.parse(
     readFileSync(await (await guestDownload).path(), "utf8"),
   );
-  assert.equal(guestExport.format, "kora-memory-export-v1");
-  assert.equal(guestExport.courses.length, 6);
+  assert.equal(guestExport.format, "kora-snapshot-v2");
+  assert.equal(guestExport.snapshot.courses.length, 6);
+  const summaryDownload = page.waitForEvent("download");
+  await page
+    .getByRole("button", { name: "Download study summary", exact: true })
+    .click();
+  const summary = JSON.parse(
+    readFileSync(await (await summaryDownload).path(), "utf8"),
+  );
+  assert.equal(summary.format, "kora-research-summary-v1");
+  for (const key of ["profile", "courses", "sessions", "target", "exportedAt"])
+    assert.equal(Object.hasOwn(summary, key), false);
+  assert.equal(summary.activeStudyDays, 0);
+  await upload(exported);
+  await page
+    .getByRole("button", { name: "Replace my data with this backup" })
+    .click();
+  await page
+    .getByRole("status")
+    .filter({ hasText: "Your backup has been restored" })
+    .waitFor();
+  await page
+    .getByText(
+      "Demo data and simulated time are excluded from research summaries.",
+      { exact: false },
+    )
+    .waitFor();
   await page.reload();
   await page.getByLabel("What should we call you?").waitFor();
+  const migrationContext = await browser.newContext();
+  const migrationPage = await migrationContext.newPage();
+  await migrationPage.goto(base + "/sources/practice-notes.json");
+  await migrationPage.evaluate(
+    (snapshot) =>
+      new Promise((resolve, reject) => {
+        // Dexie's declared version 1 is native IndexedDB version 10.
+        const open = indexedDB.open("kora-local", 10);
+        open.onerror = () => reject(open.error);
+        open.onupgradeneeded = () => {
+          const db = open.result;
+          const stores = {
+            profile: "id",
+            settings: "id",
+            mockPlans: "id",
+            mockCourses: "id",
+            targets: "id",
+            progress: "lessonId",
+            sessions: "id",
+            momentum: "id",
+            savedEntries: "libraryEntryId",
+            preferences: "id",
+            reports: "id",
+          };
+          for (const [name, keyPath] of Object.entries(stores)) {
+            const store = db.createObjectStore(name, { keyPath });
+            for (const index of {
+              mockCourses: ["planId", "semesterIndex"],
+              targets: ["planId"],
+              sessions: ["startedAt"],
+            }[name] ?? [])
+              store.createIndex(index, index);
+          }
+        };
+        open.onsuccess = () => {
+          const db = open.result,
+            tx = db.transaction(Array.from(db.objectStoreNames), "readwrite");
+          tx.objectStore("profile").put({
+            ...snapshot.profile,
+            nickname: "Legacy learner",
+          });
+          tx.objectStore("settings").put({
+            ...snapshot.settings,
+            id: "settings",
+          });
+          for (const course of snapshot.courses)
+            tx.objectStore("mockCourses").put(course);
+          tx.objectStore("momentum").put({
+            ...snapshot.momentum,
+            id: "momentum",
+          });
+          tx.objectStore("preferences").put({
+            id: "scale",
+            scale: snapshot.scale,
+          });
+          tx.objectStore("targets").put({
+            id: "target",
+            value: snapshot.target,
+            planId: "main",
+            type: "cgpa",
+            derivedWeeklyHours: 0,
+          });
+          tx.oncomplete = () => {
+            db.close();
+            resolve();
+          };
+          tx.onerror = () => reject(tx.error);
+        };
+      }),
+    exported.snapshot,
+  );
+  await migrationPage.goto(base + "/semester/");
+  await migrationPage
+    .getByRole("heading", { name: "A target. A plan. Your next step." })
+    .waitFor();
+  assert.equal(
+    await migrationPage.getByLabel(/Recorded grade/).count(),
+    6,
+    "Version 1 courses survive the upgrade",
+  );
+  const upgraded = await migrationPage.evaluate(
+    () =>
+      new Promise((resolve, reject) => {
+        const open = indexedDB.open("kora-local");
+        open.onerror = () => reject(open.error);
+        open.onsuccess = () => {
+          const db = open.result;
+          resolve({
+            version: db.version,
+            academic: db.objectStoreNames.contains("academic"),
+          });
+          db.close();
+        };
+      }),
+  );
+  assert.deepEqual(upgraded, { version: 20, academic: true });
+  await migrationContext.close();
   assert.ok(
     requests.every((r) => r.method === "GET" && !r.body),
     "Core requests must never contain learner data.",
@@ -261,6 +450,8 @@ try {
         delete: true,
         noLearnerRequests: true,
         guestMode: true,
+        restoreRollback: true,
+        legacyDatabaseMigration: true,
         keyboard:
           "Semantic and visible-focus controls; manual review still recommended.",
         pageErrors: errors,

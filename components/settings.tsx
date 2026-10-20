@@ -5,6 +5,7 @@ import { useKora } from "./provider";
 import { config, weekKey } from "../lib/momentum";
 import type { Settings as Prefs } from "../lib/db";
 import type { CopyKey } from "../lib/i18n";
+import { OfflineDetails } from "./offline-details";
 export function Settings() {
   const { data, update, t, now, demo } = useKora();
   const [confirm, setConfirm] = useState(false);
@@ -26,6 +27,7 @@ export function Settings() {
         <p className="intro">{t("settingsIntro")}</p>
       </div>
       <div className="settings-grid">
+        <OfflineDetails />
         <section className="card settings-card">
           <label>
             {t("nicknameSetting")}

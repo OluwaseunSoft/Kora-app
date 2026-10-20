@@ -1,76 +1,20 @@
 import Dexie, { type Table } from "dexie";
-import type { Course, RetakeRule, Scale } from "../cgpa";
+import type { Course, Scale } from "../cgpa";
 import type { Session } from "../momentum";
-export interface Settings {
-  quietMode: boolean;
-  motivationFrequency: "off" | "daily" | "weekly";
-  ttsEnabled: boolean;
-  textScale: number;
-  highContrast: boolean;
-  plainLanguage: boolean;
-  lowLiteracyMode: boolean;
-  adaptiveSuggestions: boolean;
-  consentAcceptedAt: number | null;
-  hoursPerUnit: number;
-  retakeRule: RetakeRule;
-  demoOffset: number;
-  examDate: string;
-  preferredTime: string;
-}
-export interface Profile {
-  id: string;
-  nickname: string;
-  language: "en" | "pcm";
-  createdAt: number;
-  optionalFields: Record<string, string>;
-}
-export interface Progress {
-  lessonId: string;
-  status: "started" | "completed";
-  completedAt: number | null;
-  quizResults: { at: number; score: number; total: number }[];
-}
-export interface Momentum {
-  restTokens: number;
-  restTokensUsed: number[];
-  grantedWeeks: string[];
-  lastOfferAt: number | null;
-  lastReason: string | null;
-  lastState: string;
-  weekProgress: string[];
-  recentEntries: string[];
-  lastEntryAt: number | null;
-  currentEntryId: string | null;
-}
-export interface Snapshot {
-  profile: Profile | null;
-  settings: Settings;
-  courses: Course[];
-  progress: Progress[];
-  sessions: Session[];
-  momentum: Momentum;
-  savedEntries: { libraryEntryId: string; savedAt: number }[];
-  target: number;
-  scale: Scale;
-  reports: { id: string; entryId: string; at: number }[];
-}
-export const defaultSettings: Settings = {
-  quietMode: false,
-  motivationFrequency: "daily",
-  ttsEnabled: true,
-  textScale: 1,
-  highContrast: false,
-  plainLanguage: false,
-  lowLiteracyMode: false,
-  adaptiveSuggestions: true,
-  consentAcceptedAt: null,
-  hoursPerUnit: 2,
-  retakeRule: "replace",
-  demoOffset: 0,
-  examDate: "",
-  preferredTime: "17:00",
-};
+import { emptyAcademic, type Academic } from "../academic";
+import {
+  defaultSettings,
+  emptyMomentum,
+  type Settings,
+  type Profile,
+  type Progress,
+  type Momentum,
+  type Snapshot,
+} from "./state";
+export { defaultSettings, emptyMomentum } from "./state";
+export type { Settings, Profile, Progress, Momentum, Snapshot } from "./state";
 class KoraDB extends Dexie {
+  academic!: Table<Academic & { id: string }, string>;
   profile!: Table<Profile, string>;
   settings!: Table<Settings & { id: string }, string>;
   mockPlans!: Table<{ id: string; name: string; semesters: number[] }, string>;
@@ -106,21 +50,10 @@ class KoraDB extends Dexie {
       preferences: "id",
       reports: "id",
     });
+    this.version(2).stores({ academic: "id" });
   }
 }
 export const db = new KoraDB();
-export const emptyMomentum = (): Momentum => ({
-  restTokens: 2,
-  restTokensUsed: [],
-  grantedWeeks: [],
-  lastOfferAt: null,
-  lastReason: null,
-  lastState: "steady",
-  weekProgress: [],
-  recentEntries: [],
-  lastEntryAt: null,
-  currentEntryId: null,
-});
 export async function loadSnapshot(scale: Scale): Promise<Snapshot> {
   const [
     profile,
@@ -133,6 +66,7 @@ export async function loadSnapshot(scale: Scale): Promise<Snapshot> {
     target,
     preferences,
     reports,
+    academic,
   ] = await Promise.all([
     db.profile.get("me"),
     db.settings.get("settings"),
@@ -144,8 +78,10 @@ export async function loadSnapshot(scale: Scale): Promise<Snapshot> {
     db.targets.get("target"),
     db.preferences.get("scale"),
     db.reports.toArray(),
+    db.academic.get("semester"),
   ]);
   return {
+    academic: academic ?? emptyAcademic(),
     profile: profile ?? null,
     settings: settings ?? defaultSettings,
     courses,
@@ -160,7 +96,9 @@ export async function loadSnapshot(scale: Scale): Promise<Snapshot> {
 }
 export async function saveSnapshot(s: Snapshot) {
   await db.transaction("rw", db.tables, async () => {
+    await db.academic.put({ ...s.academic, id: "semester" });
     if (s.profile) await db.profile.put(s.profile);
+    else await db.profile.clear();
     await db.settings.put({ ...s.settings, id: "settings" });
     await db.mockPlans.put({
       id: "main",
